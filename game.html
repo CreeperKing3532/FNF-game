@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Page</title>
+    <style>
+        /* Center the game container (iframe) horizontally and vertically */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Take up full viewport height */
+            margin: 0;
+            flex-direction: column; /* Stack the elements vertically */
+        }
+
+        #gameContainer {
+            text-align: center;
+        }
+
+        #messageContainer {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        iframe {
+            display: block; /* Removes the iframe's default inline-block display */
+            margin: 0 auto; /* Centers the iframe horizontally */
+        }
+
+        button {
+            margin-bottom: 20px; /* Add some space below the button */
+        }
+    </style>
 </head>
 <body>
     <h1>Game</h1>
