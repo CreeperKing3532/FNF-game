@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+</head>
+<body>
+    <h1>Game</h1>
+    <button onclick="goBack()">Back to Main Page</button>
+
+    <div id="gameContainer">
+        <iframe id="gameIframe" width="482" height="412" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+
+    <div id="messageContainer" style="display:none;">
+        <p>This Level is not ready yet! Come back later :D</p>
+    </div>
+
+    <script>
+        // Function to get the cookie value by name
+        function getCookie(name) {
+            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+        }
+
+        function goBack() {
+            window.location.href = "index.html"; // Redirect to the main page
+        }
+
+        // Get the level number or special cookie value from the cookie
+        let level = getCookie('level');
+
+        // Check if the cookie is "Coming_soon"
+        if (level === "Coming_soon") {
+            // Hide the iframe and show the message
+            document.getElementById("gameContainer").style.display = "none";
+            document.getElementById("messageContainer").style.display = "block";
+        } else if (level) {
+            // Set the iframe's src to load the selected level's game from TurboWarp
+            document.getElementById('gameIframe').src = "https://turbowarp.org/" + level + "/embed";
+        } else {
+            // Handle case where no level is selected (perhaps redirect back to main page)
+            alert("No level selected. Please go back and select a level.");
+        }
+    </script>
+</body>
+</html>
