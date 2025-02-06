@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Level</title>
+</head>
+<body>
+    <h1>Select a Level to Play</h1>
+    <button onclick="selectLevel(1130040680)">Level 1</button>
+    <button onclick="selectLevel(Coming_soon)">Level 2 (not made)</button>
+    <button onclick="selectLevel(Coming_soon)">Level 3 (not made)</button>
+
+    <script>
+        function selectLevel(levelNumber) {
+            // Set the selected level as a cookie
+            document.cookie = "level=" + levelNumber + ";path=/";
+            // Redirect to the game page
+            window.location.href = "game.html"; // Redirects to the game page in the same directory
+        }
+    </script>
+</body>
+</html>
