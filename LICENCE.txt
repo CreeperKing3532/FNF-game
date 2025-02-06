@@ -1,0 +1,10 @@
+Idulza X FNF Game  
+Copyright (C) 2025 CreeperKing288  
+
+You are free to copy, modify, and distribute this code as long as you:  
+1. Give credit to the original author (CreeperKing288) and include a link to their YouTube channel (https://www.youtube.com/@CreeperKing288).  
+2. Keep this license text unmodified in all copies or modified versions.  
+3. Do not claim the original work as your own.  
+4. You may not sell or monetize this software or any modified version for profit.  
+
+This software is provided "as is" without any warranty.  
